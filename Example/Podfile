@@ -1,6 +1,0 @@
-use_frameworks!
-target 'react-native-pager-view_Tests' do
-  pod 'react-native-pager-view', :path => '../'
-  
-  
-end

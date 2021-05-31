@@ -1,42 +1,20 @@
-#
-# Be sure to run `pod lib lint react-native-pager-view.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
+version = '5.1.10'
+source = { :git => 'https://github.com/callstack/react-native-pager-view.git', :tag => "#{version}"}
 
 Pod::Spec.new do |s|
-  s.name             = 'react-native-pager-view'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of react-native-pager-view.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/oceanfive/react-native-pager-view'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'oceanfive' => '849638313@qq.com' }
-  s.source           = { :git => 'https://github.com/oceanfive/react-native-pager-view.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
-  s.ios.deployment_target = '9.0'
-
-  s.source_files = 'react-native-pager-view/Classes/**/*'
+  s.name         = "react-native-pager-view"
+  s.version      = version
+  s.summary      = "React Native wrapper for Android and iOS ViewPager"
+  s.homepage     = "https://github.com/callstack/react-native-pager-view#readme"
+  s.license      = { :type => 'MIT' }
+  s.authors      = "troZee <hello@callstack.com> (https://github.com/callstack)"
+  s.static_framework       = true
   
-  # s.resource_bundles = {
-  #   'react-native-pager-view' => ['react-native-pager-view/Assets/*.png']
-  # }
+  s.platforms    = { :ios => "10.0" }
+  s.source       = source
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = "ios/**/*.{h,m,mm,swift}"
+
+  s.dependency "React-Core"
 end
